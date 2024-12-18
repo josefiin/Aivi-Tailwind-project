@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Josefin Holgersson">
+    <meta name="description" content="Examinationsuppgift">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examinationsuppgift Ramverk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light-grey">
+    <div class="container-wide">
+        <header class="pt-8">
+            <nav class="flex items-center justify-between">
+                <a href="index.html">
+                    <img class="w-20" src="images/aivi_logotype_black.svg" alt="Aivi logotype">
+                </a>
+                <button class="lg:hidden flex items-center px-3 py-2" id="menu-icon">
+                    <img src="images/menu_icon.svg" alt="menu-icon" class="h-8 w-8">
+                </button>
+                <ul class="hidden lg:flex gap-x-12" id="menu">
+                    <li class="relative group flex items-center gap-x-1 hover:cursor-pointer">
+                        <a href="#" class="hover:text-cta-dark group-hover:text-cta-dark">Products</a>
+                        <span><img src="images/chevron-down_icon.svg" alt="arrow down icon"></span>
+                        <div class="pt-4 absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block">
+                            <ul class=" bg-white rounded shadow-lg overflow-hidden">
+                                <li><a href="product.html" class="block px-4 py-4 hover:bg-light-grey hover:text-cta-dark whitespace-nowrap">Business Verification</a></li>
+                                <li><a href="#" class="block px-4 py-4 hover:bg-light-grey hover:text-cta-dark whitespace-nowrap">Global Identity Platform</a></li>
+                                <li><a href="#" class="block px-4 py-4 hover:bg-light-grey hover:text-cta-dark whitespace-nowrap">Electronic identification</a></li>
+                                <li><a href="#" class="block px-4 py-4 hover:bg-light-grey hover:text-cta-dark whitespace-nowrap">Face recognition</a></li>
+                                <li><a href="#" class="block px-4 py-4 hover:bg-light-grey hover:text-cta-dark whitespace-nowrap">Fingerprint identification</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="hover:text-cta-dark">Industries</a></li>
+                    <li class="relative group flex items-center gap-x-1 hover:cursor-pointer">
+                        <a href="#" class="hover:text-cta-dark group-hover:text-cta-dark">Costumer Stories</a>
+                        <span><img src="images/chevron-down_icon.svg" alt="arrow down icon"></span>
+                        <div class="pt-4 absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block">
+                            <ul class=" bg-white rounded shadow-lg overflow-hidden">
+                                <li><a href="costumer.html" class="block px-4 py-4 hover:bg-light-grey hover:text-cta-dark whitespace-nowrap">Lenya</a></li>
+                                <li><a href="#" class="block px-4 py-4 hover:bg-light-grey hover:text-cta-dark whitespace-nowrap">Consectetur</a></li>
+                                <li><a href="#" class="block px-4 py-4 hover:bg-light-grey hover:text-cta-dark whitespace-nowrap">Neque</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="hover:text-cta-dark">Company</a></li>
+                </ul>
+                <a href="bookdemo.html" class="btn-outline-sm hidden lg:inline-block">Book a demo</a>
+            </nav>
+            
+            <div class="lg:hidden hidden" id="mobileMenu">
+                <ul class="text-lg flex flex-col gap-y-5 my-6">
+                <li><a href="#" class="font-medium hover:text-cta-dark">Products</a>
+                    <ul class="pl-4 pt-3">
+                        <li class="mb-2"><a href="product.html" class="hover:text-cta-dark">Business Verification</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-cta-dark">Global Identity Platform</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-cta-dark">Electronic identification</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-cta-dark">Face recognition</a></li>
+                        <li><a href="#" class="hover:text-cta-dark">Fingerprint identification</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="font-medium hover:text-cta-dark">Industries</a></li>
+                <li><a href="#" class="font-medium hover:text-cta-dark">Costumer Stories</a>
+                    <ul class="pl-4 pt-3">
+                        <li class="mb-2"><a href="costumer.html" class="hover:text-cta-dark">Lenya</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-cta-dark">Consectetur</a></li>
+                        <li><a href="#" class="hover:text-cta-dark">Neque</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="font-medium hover:text-cta-dark">Company</a></li>
+                </ul>
+                <a href="bookdemo.html" class="btn-outline-md mt-4">Book a demo</a>
+            </div>
+        </header>
+    </div>   
+
+    <main class="container-wide md:grid md:grid-cols-12 mt-20 md:mt-60 mb-20 md:mb-32">
+        <div class="col-span-5 mb-14 md:mb-0">
+            <p class="sub-heading">Book a demo</p>
+            <h1 class="heading-lg">Meet a <br>verification expert </h1>
+            <p class="preamble-sm">Quae perspiciatis aspernatur doloremque. Inventore aut ipsam ex consequatur optio id et. Id voluptatem cumque explicabo et est nihil deleniti id.</p>
+        </div>
+
+         <!-- Formulär -->
+        <form class="col-span-4 col-start-8 text-sm">
+
+            <!-- First name -->
+            <div class="mb-6">
+              <label for="first-name" class="block mb-2">First Name*</label>
+              <input class="input-style" id="first-name" type="text" required placeholder="First Name">
+            </div>
+
+            <!-- Last name -->
+            <div class="mb-6">
+                <label for="last-name" class="block mb-2">Last Name*</label>
+                <input class="input-style" id="last-name" type="text" required placeholder="Last Name">
+            </div>
+
+            <!-- Email -->
+            <div class="mb-6">
+                <label for="email" class="block mb-2">Email*</label>
+                <input class="input-style" id="email" type="email" required placeholder="Email">
+            </div>
+
+            <!-- Mobile -->
+            <div class="mb-6">
+                <label for="mobile" class="block mb-2">Mobile*</label>
+                <input class="input-style" id="mobile" type="tel" required placeholder="Mobile">
+            </div>
+
+            <!-- Country -->
+            <div class="mb-6">
+                <label for="country" class="block mb-2">Country*</label>
+                <input class="input-style" id="country" type="Text" required placeholder="Country">
+            </div>
+
+            <!-- Company -->
+            <div class="mb-6">
+                <label for="company" class="block mb-2">Company*</label>
+                <input class="input-style" id="company" type="text" required placeholder="Company">
+            </div>
+
+            <!-- Checkbox -->
+            <div class="flex gap-x-4 mb-6 ">
+                <input id="agree" name="agree" type="checkbox" class="h-5 w-5">
+                <label for="agree" class="text-xs">I agree to be contacted by Aivi and to have my data used for this purpose.</label>
+            </div>
+            
+            <!-- Button -->
+            <div>
+                <button class="btn-secondary w-full" type="submit">
+                    Request an introductory call
+                </button>
+            </div>
+            
+        </form>
+
+    </main>
+
+    <footer class="bg-primary-dark">
+        <div class="container-wide py-20">
+            <a href="index.html">
+                <img class="w-20 mb-10" src="images/aivi_logotype.svg" alt="Aivi logotype">
+            </a>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-6 mb-10">
+            <section class="col-span-2 md:col-span-4">
+                <p class="text-xl leading-relaxed text-primary-light">Secure and effortless <br>authentication for the digital age</p>
+            </section>
+            <section class="col-span-1 lg:col-span-2 lg:col-start-5">
+                <h4 class="text-sm font-medium text-primary-light mb-5">Products</h4>
+                <ul class="text-sm text-white ">
+                  <li class="mb-5">Business Verification</li>
+                  <li class="mb-5">Global Identity Platform</li>
+                  <li class="mb-5">Electronic identification</li>
+                  <li class="mb-5">Face recognition</li>
+                  <li class="mb-5">Fingerprint identification</li>
+                  <li class="mb-5">How it works</li>
+                </ul>
+            </section>
+            <section class="col-span-1 lg:col-span-2 lg:col-start-7">
+                <h4 class="text-sm font-medium text-primary-light mb-4">Industries</h4>
+                <ul class="text-sm text-white">
+                  <li class="mb-5">Authorities</li>
+                  <li class="mb-5">Business</li>
+                  <li class="mb-5">Banking</li>
+                  <li class="mb-5">Healthcare</li>
+                  <li class="mb-5">The education sector</li>
+                  <li class="mb-5">Marketplaces</li>
+                  <li class="mb-5">Online trading</li>
+                  <li class="mb-5">Payments</li>
+                </ul>
+            </section>
+            <section class="col-span-1 lg:col-span-2 lg:col-start-9">
+                <h4 class="text-sm font-medium text-primary-light mb-4">Resources</h4>
+                <ul class="text-sm text-white">
+                  <li class="mb-5">Customers</li>
+                  <li class="mb-5">Resources</li>
+                  <li class="mb-5">News and Press</li>
+                  <li class="mb-5">Media kit</li>
+                </ul>
+            </section>
+            <section class="col-span-1 lg:col-span-2 lg:col-start-11">
+                <h4 class="text-sm font-medium text-primary-light mb-4">Company</h4>
+                <ul class="text-sm text-white">
+                    <li class="mb-5">About Us</li>
+                    <li class="mb-5">Security and Compliance</li>
+                    <li class="mb-5">Careers</li>
+                    <li class="mb-5">Contact Us</li>
+                  </ul>
+            </section>
+            </div>
+            <div class="flex items-center justify-between border-t border-primary-light pt-7">
+                <span class="text-xs text-white">Copyright © 2024 Aivi. All rights reserved.</span>
+                <div class="flex gap-4 md:gap-6">
+                    <span><img src="images/linkedin_icon.svg" alt="LinkedIn icon"></span>
+                    <span><img src="images/x_icon.svg" alt="X icon"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

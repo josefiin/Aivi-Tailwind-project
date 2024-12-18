@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        /* Sätter basfärg och typsnitt på text på body */
+        @apply antialiased text-stone-800   font-body;
+    }
+
+    p {
+        /* Sätter margin bottom på alla p-taggar. 24px */
+        @apply mb-6 leading-relaxed;
+    }
+
+    /* Huvudklasser för knappar med de tailwind klasser jag vill ha. */
+    .btn-primary {
+        @apply block w-fit rounded-full bg-cta-mid py-3 px-8 text-center text-primary-dark hover:bg-cta-dark;
+    }
+    .btn-secondary {
+        @apply block w-fit rounded-full bg-primary-dark py-3 px-8 text-center text-cta-mid hover:bg-primary-mid;
+    }
+    .btn-outline-sm {
+        @apply block w-fit rounded-full border border-cta-dark py-2 px-6 text-center hover:bg-cta-dark;
+    }
+    .btn-outline-md {
+        @apply block w-fit rounded-full border border-cta-dark py-3 px-8 text-center hover:bg-cta-dark;
+    }
+    /* Huvudklasser för headings */
+    .heading-cta {
+        @apply font-display text-center text-6xl md:text-8xl leading-none md:leading-none mb-5 md:mb-8;
+    }
+    .heading-xl {
+        @apply font-display text-primary-dark text-5xl md:text-8xl mb-6 leading-none md:leading-none;
+    }
+    /* Det är olika line-height på fontstolekar i Tailwind. På en del rubriker önskar jag samma oavsett storlek på text, behöver definera line-height på samma brytpunkter som jag ändrar storlek på fonten för att det ska slå igenom. */
+    .heading-lg {
+        @apply font-display text-primary-dark text-5xl md:text-7xl mb-4 md:mb-8 leading-none md:leading-none;
+    }
+    .heading-md {
+        @apply font-display text-primary-dark text-3xl md:text-5xl leading-tight md:leading-tight;
+    }
+    .heading-sm {
+        @apply font-display text-primary-dark text-xl md:text-2xl leading-tight md:leading-tight mb-2 md:mb-3;
+    }
+    .heading-xs {
+        @apply font-display text-primary-dark text-xl;
+    }
+    .sub-heading {
+        @apply text-sm text-primary-mid mb-4 md:mb-6;
+    }
+    .preamble {
+        @apply text-xl md:text-2xl text-center mb-5 md:mb-10
+    }
+    .preamble-sm {
+        @apply text-xl text-primary-mid leading-relaxed
+    }
+
+    /* Skapar container-klasser för att styra maxbredden på content-sektioner */
+    .container-wide {
+        @apply max-w-screen-xl mx-auto px-6 md:px-10;
+    }
+
+    .container-narrow {
+        @apply max-w-4xl mx-auto px-6;
+    }
+ 
+    
+    .card {
+        @apply mb-10 md:mb-0;
+    }
+
+    /* En klass för att styra centrering av bilder i mobil. */
+    .card-center-mobile {
+        @apply flex md:flex-none flex-col items-center md:items-start text-center md:text-left
+    }
+
+    .text-img-block {
+        @apply container-wide md:grid md:grid-cols-12 items-center my-20 md:my-32;
+    }
+
+    /* Gjorde klass för bilder i text-bild block, de används inte på så många stälen som jag trodde men de får vara kvar. Lite mindre rundning på bilder i mobil */
+    .img-left-block {
+        @apply col-span-6 rounded-image-md md:rounded-image-lg mb-10 md:mb-0
+    }
+
+    .img-right-block {
+        @apply col-span-6 col-start-7 rounded-image-md md:rounded-image-lg mb-10 md:mb-0
+    }
+    .input-style {
+        @apply bg-transparent appearance-none border border-primary-mid rounded-md focus:outline-none focus:border focus:border-cta-dark w-full py-3 px-3 text-stone-700
+    }
+}
